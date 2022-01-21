@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/fontawesome.css">
+  <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/solid.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <title>Figuras Geométricas</title>
+</head>
+<body>
+  <main id="hero">
+    <header>
+      <h1>Geometrics Figures</h1>
+      <div class="container_select">
+        <h2>Select a geometric figure</h2>
+      </div>
+    </header>
+    <div class="container">
+      <div class="container_main">
+        <div class="container_main--fig" id="imgSquare">
+          <img src="./imagenes/cuadrado.png" alt="square">
+      </div >
+      <div class="container_main--fig" id='imgTriangle'>
+          <img src="./imagenes/triangulo.png" alt="triangle">
+      </div>
+      <div class="container_main--fig">
+          <img src="./imagenes/circulo.png" alt="circle" id="imgCircle">
+      </div>
+      <div class="container_main--fig">
+          <img src="./imagenes/rectangulo.png" alt="rectangle" id='imgRectangle'>
+      </div>
+      <div class="container_main--fig">
+          <img src="./imagenes/hexagono.png" alt="hexagon" id="imgHexagon">
+      </div>
+      <div class="container_main--fig">
+          <img src="./imagenes/elipse.png" alt="ellipse">
+      </div>
+      </div>
+      <footer>
+        <p>Made with 💖 by <a href="https://twitter.com/FranciscoCata10" target="_blank">@catasistemas</a></p>
+      </footer>
+    </div>
+    <video muted autoplay loop src="./imagenes/geometric.mp4" type="video/mp4"></video>
+    <div class="capa">
+    </div>
+    <!--////////////// OVERLAYS-POPUPS////////////// -->
+    <!--/////////////// Square //////////////////////-->
+    <div class="overlay" id="overlay">
+      <div class="popup" id="popup">
+        <a href="#" id="cerrar-popup" class="cerrar-popup"><i class="fas fa-times"></i></a>
+        <img src="./imagenes/cuadrado.png" alt="Square" class="figures">
+        <h4>How long are the sides of the square?</h4>
+        <form action="" class="cuadrado">
+          <div class="container-inputs">
+            <input type="number" placeholder="Sides" id="inputCuadrado">
+          </div>
+          <div class="button-cua">
+            <input type="button" value="Calculate" onclick="calcuCuadrado()" class="btn-calculate" id='resolveSquare'>
+          </div>
+          <div id="reSquare" class="resultFigure">
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- ////////////////Triangle/////////////// -->
+    <div class="overlay" id="overlayT">
+      <div class="popup" id="popupT">
+        <a href="#" id="cerrar-popupT" class="cerrar-popup"><i class="fas fa-times"></i></a>
+        <img src="./imagenes/triangulo.png" alt="triangle" class="figures">
+        <h4>How long are the sides of the triangle?</h4>
+        <form action="" class="triangle">
+          <div class="container-inputs">
+            <input type="number" placeholder="Side A" id="inputTriA">
+            <input type="number" placeholder="Side B" id="inputTriB">
+            <input type="number" placeholder="Side C" id="inputTriBase">
+          </div>
+          <div class="button-cua">
+            <input type="button" id="resolveTriangle" value="Calculate" onclick="calcuTri()" class="btn-calculate">
+          </div>
+          <div id="reTria" class="resultFigure">
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--/////////////// Circle //////////////////////-->
+    <div class="overlay" id="overlayC">
+      <div class="popup" id="popupC">
+        <a href="#" id="cerrar-popupC" class="cerrar-popup"><i class="fas fa-times"></i></a>
+        <img src="./imagenes/circulo.png" alt="Circle" class="figures">
+        <h4>what is the radius of the circle?</h4>
+        <form action="" class="circle">
+          <div class="container-inputs">
+            <input type="number" placeholder="Radius" id="inputCircle">
+          </div>
+          <div class="button-cua">
+            <input type="button" value="Calculate" onclick="calcuCircu()" class="btn-calculate" id='resolveCircle'>
+          </div>
+          <div id="reCircle" class="resultFigure">
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--/////////////// rectagle //////////////////////-->
+    <div class="overlay" id="overlayR">
+      <div class="popup" id="popupR">
+        <a href="#" id="cerrar-popupR" class="cerrar-popup"><i class="fas fa-times"></i></a>
+        <img src="./imagenes/rectangulo.png" alt="Circle" class="figures">
+        <h4>How long are the sides of the rectangle?</h4>
+        <form action="" class="circle">
+          <div class="container-inputs">
+            <input type="number" placeholder="Side A" id="inputRec1">
+            <input type="number" placeholder="Side B" id="inputRec2">
+          </div>
+          <div class="button-cua">
+            <input type="button" value="Calculate" onclick="calcuRec()" class="btn-calculate" id='resolveRec'>
+          </div>
+          <div id="reRec" class="resultFigure">
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--/////////////// Hexagono //////////////////////-->
+    <div class="overlay" id="overlayH">
+      <div class="popup" id="popupH">
+        <a href="#" id="cerrar-popupH" class="cerrar-popup"><i class="fas fa-times"></i></a>
+        <img src="./imagenes/hexagono.png" alt="Hexagon" class="figures">
+        <h4>How long are the sides of a regular hexagon?</h4>
+        <form action="" class="hexagon">
+          <div class="container-inputs">
+            <input type="number" placeholder="Sides" id="inputHex1">
+          </div>
+          <div class="button-cua">
+            <input type="button" value="Calculate" onclick="calcuHex()" class="btn-calculate" id='resolveHex'>
+          </div>
+          <div id="reHex" class="resultFigure">
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>
