@@ -157,7 +157,7 @@ function calcuCircu() {
     const perimetroCirculo = (radio)=> radio * 2 * Math.PI;
     const areaCirculo = (radio)=> Math.PI * Math.pow(radio, 2);  //Math.pow es para calcular potencia.
     document.getElementById('reCircle').innerHTML = `The perimeter of the circle is: <strong>${perimetroCirculo(radio)} cm</strong>
-    and the area is:<strong>${areaCirculo(radio)} cm^2</strong>`;
+    and the area is: <strong>${areaCirculo(radio)} cm^2</strong>`;
 }
 
 function calcuRec() {
