@@ -66,26 +66,49 @@ openHexagon.addEventListener('click', function(){
 })
 
 closePopup.addEventListener('click', function(){
+    const limpiar = document.getElementById('reSquare');
+    reSquare.classList.remove('active');
+    limpiar.innerHTML = '';
+    document.getElementById('inputCuadrado').value ='';
     overlay.classList.remove('active');
     popup.classList.remove('active');
 });
 
 closePopupT.addEventListener('click', function(){
+    const limpiar = document.getElementById('reTria');
+    reTria.classList.remove('active');
+    limpiar.innerHTML = '';
+    document.getElementById('inputTriA').value ='';
+    document.getElementById('inputTriB').value ='';
+    document.getElementById('inputTriBase').value ='';
     overlayT.classList.remove('active');
     popupT.classList.remove('active');
 });
 
 closePopupC.addEventListener('click', function(){
+    const limpiar = document.getElementById('reCircle');
+    reCircle.classList.remove('active');
+    limpiar.innerHTML = '';
+    document.getElementById('inputCircle').value ='';
     overlayC.classList.remove('active');
     popupC.classList.remove('active');
 });
 
 closePopupR.addEventListener('click', function(){
+    const limpiar = document.getElementById('reRec');
+    reRec.classList.remove('active');
+    limpiar.innerHTML = '';
+    document.getElementById('inputRec1').value ='';
+    document.getElementById('inputRec2').value ='';
     overlayR.classList.remove('active');
     popupR.classList.remove('active');
 });
 
 closePopupH.addEventListener('click', function(){
+    const limpiar = document.getElementById('reHex');
+    reHex.classList.remove('active');
+    limpiar.innerHTML = '';
+    document.getElementById('inputHex1').value ='';
     overlayH.classList.remove('active');
     popupH.classList.remove('active');
 });
@@ -127,6 +150,11 @@ function calcuTri() {
     const areaTriangulo = ()=> Math.sqrt(heron);
     document.getElementById('reTria').innerHTML = `The perimeter of the triangle is: <strong>${perimetroTriangulo(valueA, valueB, valueBase)} cm</strong>
     and the area is: <strong>${areaTriangulo()} cm^2</strong>`;
+    function vaciar(){
+        
+
+    }
+
 }
 
 function calcuAlTri(){
