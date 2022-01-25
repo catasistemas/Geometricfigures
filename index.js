@@ -237,7 +237,7 @@ function calcuRec() {
         }else if (ladoReca === '' || ladoRecb === ''){
             document.getElementById('reRec').innerHTML = `Fields cannot remain empty`
         }else {
-            document.getElementById('reRec').innerHTML = `If you want to form a rectangle, its sides cannot be equal!`;
+            document.getElementById('reRec').innerHTML = `If you want to form a rectangle, its sides cannot be equals!`;
     }
 }
 
@@ -265,13 +265,15 @@ function calcuEllip() {
     const radioS2 = inputEllip2.value;
     const radioEllip1 = parseFloat(radioS1);
     const radioEllip2 = parseFloat(radioS2);
-    if (radioS1 === '' || radioS2 === ''){
-        document.getElementById('reEllip').innerHTML = `Fields cannot remain empty`
-    }else {
+    if (radioS1 !== radioS2){
         const raizEllip = (Math.pow(radioEllip1, 2) + Math.pow(radioEllip2, 2))/2;
         const perimetroEllip = ()=> 2 * Math.PI * Math.sqrt(raizEllip);
         const areaEllip = (radio1, radio2)=> Math.PI * radio1 * radio2;
         document.getElementById('reEllip').innerHTML = `The perimeter of the ellipse is: <strong>
         ${perimetroEllip().toFixed(2)} cm</strong> and the area is: <strong>${areaEllip(radioEllip1, radioEllip2).toFixed(2)} cm^2</strong>`;
+    }else if (radioS1 === '' || radioS2 === ''){
+        document.getElementById('reEllip').innerHTML = `Fields cannot remain empty`;
+    }else{
+        document.getElementById('reEllip').innerHTML = `If you want to form an Ellipse, its radius cannot be equals!`;
     }
 }
