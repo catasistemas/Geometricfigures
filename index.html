@@ -40,7 +40,7 @@
           <img src="./imagenes/hexagono.png" alt="hexagon" id="imgHexagon">
       </div>
       <div class="container_main--fig">
-          <img src="./imagenes/elipse.png" alt="ellipse">
+          <img src="./imagenes/elipse.png" alt="ellipse" id="imgEllipse">
       </div>
       </div>
       <footer>
@@ -140,6 +140,25 @@
             <input type="button" value="Calculate" onclick="calcuHex()" class="btn-calculate" id='resolveHex'>
           </div>
           <div id="reHex" class="resultFigure">
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- ////////////////Ellipse//////////////////////// -->
+    <div class="overlay" id="overlayE">
+      <div class="popup" id="popupE">
+        <a href="#" id="cerrar-popupE" class="cerrar-popup">X</a>
+        <img src="./imagenes/elipse.png" alt="Hexagon" class="figures">
+        <h4>what are the radius of the ellipse?</h4>
+        <form action="" class="ellipse">
+          <div class="container-inputs">
+            <input type="number" placeholder="Radius A" id="inputEllip1">
+            <input type="number" placeholder="Radius B" id="inputEllip2">
+          </div>
+          <div class="button-cua">
+            <input type="button" value="Calculate" onclick="calcuEllip()" class="btn-calculate" id='resolveEllip'>
+          </div>
+          <div id="reEllip" class="resultFigure">
           </div>
         </form>
       </div>
